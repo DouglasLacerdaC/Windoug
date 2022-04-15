@@ -1,0 +1,33 @@
+<div class="workspace">
+    <div class="launchers">
+        <ul>
+            <li *ngFor="item of [0,1,2,3,4,5,6,7]" (click)="windowOpened()">
+                <img src="../../../assets/img/system/icons/lol.png" alt="Icone League of Legends">
+                <span>League of Legends</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="bottom-bar">
+    <ul>
+        <li class="system">
+            <img src="../../../assets/img/system/icons/windoug.svg" alt="Logo do Sistema Operacional">
+        </li>
+        <li class="system">
+            <img src="../../../assets/img/system/icons/windoug.svg" alt="Logo do Sistema Operacional">
+        </li>
+        <li class="system">
+            <img src="../../../assets/img/system/icons/windoug.svg" alt="Logo do Sistema Operacional">
+        </li>
+        <li class="system">
+            <img src="../../../assets/img/system/icons/windoug.svg" alt="Logo do Sistema Operacional">
+        </li>
+    </ul>
+</div>
+
+<div class="window" [ngClass]="windowClass">
+    <header>
+        <button (click)="windowOpened()">X</button>
+    </header>
+</div>
