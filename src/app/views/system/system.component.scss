@@ -1,3 +1,6 @@
+@import '../../../assets/scss/window.scss';
+@import '../../../assets/scss/flex.scss';
+
 .workspace {
     padding: 20px;
     width: 100%;
@@ -11,18 +14,14 @@
         max-height: 60vh;
         
         ul {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            @include flex(flex-start, flex-start, column);
             flex-wrap: wrap;
             max-width: max-content;
             max-height: calc(100vh - 95px);
 
 
             li {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+                @include flex(flex-start, center, column);
                 padding: 10px;
                 border-radius: 5px;
                 transition: .4s ease-out;
@@ -83,6 +82,7 @@
 
             &:hover {
                 transform: translateY(-20px) scale(1.4);
+                margin: 0 20px;
             }
 
             img {
@@ -97,26 +97,26 @@
 
 .window {
     position: fixed;
-    top: 10vh;
-    left: calc(50% - 400px);
-    width: 800px;
-    height: 400px;
+    top: 5vh;
+    left: calc(50% - 500px);
+    width: 1000px;
+    height: 500px;
     background-color: #00000080;
     border-radius: 5px;
     filter: blur(20px);
     visibility: hidden;
     opacity: 0;
     transform: scale(50);
-    transition: 1s;
+    transition: 1.5s;
     z-index: 11;
 
     &.opened {
         
-        visibility: visible;
         opacity: 1;
-        filter: blur(0);
         transform: scale(1);
-        z-index: 9;
+        visibility: visible;
+        filter: blur(0);
+        transition: 1s;
 
     }
 
@@ -125,6 +125,39 @@
         display: flex;
         justify-content: flex-end;
         padding: 5px 10px;
+        position: fixed;
+        width: 100%;
+        border-radius: 5px;
+
+        button {
+            @include flex(center, center, row);
+            position: relative;
+            background-color: #ffffff10;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: none;
+            transition: .5s ease-in;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #c5000042;
+            }
+
+            div {
+                @include button(relative, 45deg);
+
+                &::after {
+                    content: '';
+                    @include button(absolute, 90deg);
+                    left: 0;
+
+                }
+
+            }
+
+        }
+
     }
 
 }

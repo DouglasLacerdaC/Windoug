@@ -27,7 +27,13 @@
 </div>
 
 <div class="window" [ngClass]="windowClass">
+    
     <header>
-        <button (click)="windowOpened()">X</button>
+        <button (click)="windowClosed()">
+            <div></div>
+        </button>
     </header>
+    
+    <router-outlet></router-outlet>
+
 </div>

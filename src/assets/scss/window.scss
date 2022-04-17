@@ -1,0 +1,7 @@
+@mixin button($position, $rotate) {
+    position: $position;
+    width: 15px;
+    height: 2px;
+    transform: rotate($rotate);
+    background-color: #ffffff;
+}
