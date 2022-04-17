@@ -121,12 +121,10 @@
     }
 
     header {
-        background: linear-gradient(180deg, #00000070 0%, rgba(22, 0, 30, 0) 90.25%);
+        background: #0000000e;
         display: flex;
         justify-content: flex-end;
         padding: 5px 10px;
-        position: fixed;
-        width: 100%;
         border-radius: 5px;
 
         button {
