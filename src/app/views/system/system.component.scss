@@ -108,7 +108,7 @@
     visibility: hidden;
     opacity: 0;
     transform: scale(50);
-    transition: 1s;
+    transition: 500ms;
     z-index: 11;
 
     &.opened {
