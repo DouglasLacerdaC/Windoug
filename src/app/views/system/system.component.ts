@@ -10,7 +10,7 @@ import { Launchers } from 'src/data/system/launchers';
 export class SystemComponent implements OnInit {
 
   launchers: any = Launchers
-  windowClass: string = ''
+  windowClass: string = 'opened'
 
   constructor(private router: Router) { }
 

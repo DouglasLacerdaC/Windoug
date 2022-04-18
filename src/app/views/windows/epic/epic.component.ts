@@ -40,9 +40,9 @@ export class EpicComponent implements OnInit {
           this.value = 0
 
           Launchers.push({
-            name: 'Fortnite',
-            logo: '../../../assets/img/system/icons/fortnite.jpg',
-            router: '/system/epic'
+            name: game.name,
+            logo: game.icon,
+            router: game.router
           })
 
         }

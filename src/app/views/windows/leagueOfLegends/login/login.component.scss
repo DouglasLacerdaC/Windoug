@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import '../../../../../assets/scss/flex.scss';
+
+.window-content {
+    position: relative;
+    height: calc(100% - 35px);
+    background-color: #121212;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 0 0 5px 5px;
+    @include flex(center, center, row);
+    background-image: url('../../../../../assets/img/leagueOfLegends/login/background.jpg');
+    background-size: cover;
+
+    input, p, input, label, legend {
+
+        font-family: 'Poppins', sans-serif;
+
+    }
+
+    .login {
+        background-color: #ffffffed;
+        padding: 40px;
+        @include flex(center, center, column);
+        width: max-content;
+        min-height: 100%;
+
+        img {
+            width: 125px;
+        }
+
+        form {
+            @include flex(center, center, column);
+
+            legend {
+                font-size: 18px;
+                font-weight: 900;
+                margin: 40px 0 20px;
+                text-align: center;
+            }
+
+            .input {
+                position: relative;
+
+                label {
+                    position: absolute;
+                    left: 10px;
+                    top: 14px;
+                    font-size: 10px;
+                    font-weight: bolder;
+                    letter-spacing: 1px;
+                    color: #00000099;
+                    text-transform: uppercase;
+                    transition: 200ms;
+                }
+
+                input {
+                    padding: 15px 10px 5px 10px;
+                    border-radius: 5px;
+                    border: none;
+                    background-color: #efefef;
+                    outline: none;
+                    border: 3px solid transparent;
+
+                    &:focus {
+                        background-color: transparent;
+                        border: 3px solid #000000;
+                    }
+
+                    &:focus + label, &:valid + label {
+                        top: 3px;
+                        left: 5px;
+                        font-size: 9px;
+                    }
+
+                }
+
+            }
+
+            button {
+                @include flex(center, center, row);
+                width: max-content;
+                padding: 15px;
+                border-radius: 15px;
+                background-color: #dd0000;
+                border: none;
+                cursor: pointer;
+                margin: 80px 0 0;
+                transition: 200ms;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+
+                img {
+                    width: 15px;
+                }
+
+            }
+
+        }
+
+    }
+
+    .background {
+        flex-grow: 1;
+        height: 100%;
+    }
+
+}

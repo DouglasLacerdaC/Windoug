@@ -1,0 +1,24 @@
+<div class="window-content">
+
+    <div class="login">
+
+        <img src="../../../../../assets/img/leagueOfLegends/login/riot.png" alt="Riot logo">
+
+        <form [formGroup]="login" (ngSubmit)="newLogin()">
+
+            <legend>Fazer login</legend>
+
+            <div class="input">
+                <input formControlName="user" type="text">
+                <label>Nome de usuário</label>
+            </div>
+
+            <button> <img src="../../../../../assets/img/leagueOfLegends/login/arrow.png" alt=""> </button>
+
+        </form>
+
+    </div>
+
+    <div class="background"></div>
+
+</div>
