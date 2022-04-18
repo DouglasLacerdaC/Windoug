@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Launchers } from 'src/data/system/launchers';
 
 @Component({
   selector: 'app-system',
@@ -8,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class SystemComponent implements OnInit {
 
+  launchers: any = Launchers
   windowClass: string = ''
 
   constructor(private router: Router) { }
@@ -15,13 +17,13 @@ export class SystemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  windowOpened() {
+  windowOpened(router: string) {
     
     if(this.windowClass == '') {
 
       this.windowClass = 'opened'
 
-      this.router.navigate(['/system/epic'])
+      this.router.navigate([router])
 
     }
 
@@ -35,7 +37,7 @@ export class SystemComponent implements OnInit {
 
       this.router.navigate([''])
 
-    }, 1000)
+    }, 700)
 
   }
 

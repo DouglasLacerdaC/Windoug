@@ -34,4 +34,27 @@
 
     </section>
 
+    <section class="games">
+        
+        <h2>Jogos Disponíveis</h2>
+
+        <div class="cards">
+
+            <div *ngFor="let game of gamesEpic" class="card" (click)="downloadGame(game)">
+
+                <div class="download-bar">
+                    <img src="{{ game.image }}" alt="">
+                    <div class="download {{ game.classVisible }}">
+                        <span>{{ game.percentageDownload }}</span>
+                    </div>
+                </div>
+
+                <p>{{ game.name }}</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
 </div>

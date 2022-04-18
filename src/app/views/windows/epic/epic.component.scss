@@ -1,14 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import '../../../../assets/scss/flex.scss';
 
-.window-content {
-    min-height: 100%;
-    background-color: #121212;
-    border-radius: 5px;
+@keyframes download {
 
-    span, input, li {
+    100% {
+        
+        width: 100%;
+    
+    }
+
+}
+
+@keyframes percentage {
+    
+    100% {
+
+        opacity: 1;
+
+    }
+
+}
+
+.window-content {
+    position: relative;
+    height: calc(100% - 35px);
+    background-color: #121212;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 0 0 5px 5px;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #ffffff50;
+        border-radius: 50px;
+    }
+
+    span, input, li, h2, p {
         
         font-family: 'Poppins', sans-serif;
+        color: #ffffff
 
     }
 
@@ -64,8 +97,10 @@
     .search {
         @include flex(flex-start, center, row);
         gap: 40px;
-        padding: 0 10%;
-        margin: 40px 0;
+        padding: 30px 10%;
+        position: sticky;
+        top: 0;
+        background-color: #121212;
 
         .search-input {
             @include flex(flex-start, center, row);
@@ -106,6 +141,93 @@
 
                 &.active, &:hover {
                     color: #ffffff;
+                }
+
+            }
+
+        }
+
+    }
+
+    .games {
+        padding: 0 10%;
+
+        h2 {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 100;
+            margin: 20px 0;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-between;
+
+            .card {
+                cursor: pointer;
+                
+                .download-bar {
+                    transition: 200ms;
+                    position: relative;
+                    
+                    &:hover {
+                        
+                        opacity: 0.7;
+
+                    }
+
+                    img {
+                        width: 150px;
+                        border-radius: 5px;
+
+                    }
+
+                    .download {
+                        @include flex(center, center, row);
+                        position: absolute;
+                        width: 0%;
+                        height: 100%;
+                        background-color: #00000090;
+                        border-radius: 5px;
+                        top: 0;
+                        left: 0;
+
+                        &.downloading {
+                            animation: download 10s forwards;
+                            
+                            span {
+                                animation: percentage 2s 3s forwards;
+
+                            }
+
+                        }
+
+                        &.installed {
+                            width: 100%;
+
+                            span {
+
+                                opacity: 1;
+
+                            }
+
+                        }
+
+                        span {
+                            opacity: 0;
+                            font-weight: 900;
+
+                        }
+
+                    }
+
+                }
+
+                p {
+                    
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                
                 }
 
             }

@@ -1,9 +1,9 @@
 <div class="workspace">
     <div class="launchers">
         <ul>
-            <li *ngFor="item of [0,1,2,3,4,5,6,7]" (click)="windowOpened()">
-                <img src="../../../assets/img/system/icons/lol.png" alt="Icone League of Legends">
-                <span>League of Legends</span>
+            <li *ngFor="let launcher of launchers" (click)="windowOpened(launcher.router)">
+                <img src="{{ launcher.logo }}" alt="Icone do botão para inicializar {{ launcher.name }}">
+                <span>{{ launcher.name }}</span>
             </li>
         </ul>
     </div>
