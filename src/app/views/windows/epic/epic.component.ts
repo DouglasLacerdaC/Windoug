@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GamesEpic } from 'src/data/epic/gamesEpic';
+import { Launchers } from 'src/data/system/launchers';
 
 @Component({
   selector: 'app-epic',
@@ -37,6 +38,12 @@ export class EpicComponent implements OnInit {
           game.classVisible = 'installed'
 
           this.value = 0
+
+          Launchers.push({
+            name: 'Fortnite',
+            logo: '../../../assets/img/system/icons/fortnite.jpg',
+            router: '/system/epic'
+          })
 
         }
 

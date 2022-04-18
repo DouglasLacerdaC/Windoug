@@ -27,6 +27,7 @@
                 transition: .4s ease-out;
                 user-select: none;
                 cursor: pointer;
+                min-width: 100px;
 
                 &:hover {
                     transform: scale(0.90);

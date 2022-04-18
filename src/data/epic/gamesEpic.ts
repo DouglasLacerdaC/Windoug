@@ -1,7 +1,7 @@
 export const GamesEpic: any = [
     {
-        name: 'Valorant',
-        image: '../../../../assets/img/epic/valorantBanner.jpg',
+        name: 'Fortnite',
+        image: '../../../../assets/img/epic/fortniteBanner.jpg',
         percentageDownload: 0,
         classVisible: '',
         router: ''
