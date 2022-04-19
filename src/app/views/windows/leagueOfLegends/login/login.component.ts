@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
     user: new FormControl('')
   }) 
   
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -20,6 +21,8 @@ export class LoginComponent implements OnInit {
   newLogin() {
     
     console.log(this.login.value.user)
+
+    this.router.navigate(['system/LeagueOfLegends/client'])
   
   }
 

@@ -60,7 +60,7 @@
 
 .bottom-bar {
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -99,9 +99,9 @@
 .window {
     position: fixed;
     top: 5vh;
-    left: calc(50% - 500px);
-    width: 1000px;
-    height: 500px;
+    left: calc(50% - 600px);
+    width: 1200px;
+    height: 550px;
     background-color: #00000080;
     border-radius: 5px;
     filter: blur(20px);

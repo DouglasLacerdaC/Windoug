@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { SystemComponent } from './views/system/system.component';
 import { EpicComponent } from './views/windows/epic/epic.component';
 import { LoginComponent } from './views/windows/leagueOfLegends/login/login.component';
+import { ClientComponent } from './views/windows/leagueOfLegends/client/client.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SystemComponent,
     EpicComponent,
-    LoginComponent
+    LoginComponent,
+    ClientComponent
   ],
   imports: [
     BrowserModule,
