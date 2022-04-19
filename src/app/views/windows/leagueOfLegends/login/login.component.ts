@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     
     console.log(this.login.value.user)
 
-    this.router.navigate(['system/LeagueOfLegends/client'])
+    this.router.navigate(['system/LeagueOfLegends/home'])
   
   }
 

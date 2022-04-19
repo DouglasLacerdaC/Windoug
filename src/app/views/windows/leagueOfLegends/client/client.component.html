@@ -1,3 +1,5 @@
+<!-- main layout client -->
+
 <div class="window-content">
 
     <header>
@@ -79,6 +81,48 @@
             <span>35</span>
         </div>
 
+        <div class="friends">
+
+            <div class="friend" *ngFor="let friend of friends">
+                
+                <div class="icon">
+                    <img src="{{ friend.icon }}" alt="">
+                </div>
+
+                <div class="info">
+                    <p>{{ friend.name }}</p>
+                    <span>Offline</span>
+                </div>
+
+                <div class="popup">
+                    <div class="banner">
+                        <img src="{{ friend.banner }}" alt="">
+                    </div>
+                    <div class="user">
+
+                        <div class="image-user">
+                            <img class="border" src="../../../../../assets/img/leagueOfLegends/client/border.png" alt="">
+                            <img class="icon" src="{{ friend.icon }}" alt="">
+                        </div>
+
+                        <div class="name">
+                            <p>{{ friend.name }}</p>
+                            <span>{{ friend.name }} #BR1</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+
     </aside>
+
+    <div class="content">
+        
+        <router-outlet></router-outlet>
+    
+    </div>
 
 </div>

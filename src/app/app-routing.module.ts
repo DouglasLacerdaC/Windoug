@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SystemComponent } from './views/system/system.component';
 import { EpicComponent } from './views/windows/epic/epic.component';
 import { ClientComponent } from './views/windows/leagueOfLegends/client/client.component';
+import { HomeComponent } from './views/windows/leagueOfLegends/home/home.component';
 import { LoginComponent } from './views/windows/leagueOfLegends/login/login.component';
 
 const routes: Routes = [
@@ -21,8 +22,14 @@ const routes: Routes = [
         component: LoginComponent
       },
       {
-        path: 'LeagueOfLegends/client',
-        component: ClientComponent
+        path: 'LeagueOfLegends',
+        component: ClientComponent,
+        children: [
+          {
+            path: 'home',
+            component: HomeComponent
+          }
+        ]
       }
     ]  
   }

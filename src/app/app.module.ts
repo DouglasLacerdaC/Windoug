@@ -8,6 +8,7 @@ import { SystemComponent } from './views/system/system.component';
 import { EpicComponent } from './views/windows/epic/epic.component';
 import { LoginComponent } from './views/windows/leagueOfLegends/login/login.component';
 import { ClientComponent } from './views/windows/leagueOfLegends/client/client.component';
+import { HomeComponent } from './views/windows/leagueOfLegends/home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ClientComponent } from './views/windows/leagueOfLegends/client/client.c
     SystemComponent,
     EpicComponent,
     LoginComponent,
-    ClientComponent
+    ClientComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

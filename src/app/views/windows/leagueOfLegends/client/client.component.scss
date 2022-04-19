@@ -1,5 +1,13 @@
 @import '../../../../../assets/scss/flex.scss';
 
+@keyframes fade {
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
 .window-content {
     position: relative;
     height: calc(100% - 35px);
@@ -20,6 +28,10 @@
         border-bottom: 1px solid #ebcfa426;
         position: fixed;
         width: 100%;
+        opacity: 0;
+        animation: fade 200ms 400ms forwards;
+        background-color: #0a162280;
+        backdrop-filter: blur(20px);
 
         .play-game {
             @include flex(center, center, row);
@@ -142,7 +154,7 @@
 
             &::before {
                 content: '';
-                left: -25px;
+                left: -30px;
                 height: 80%;
                 width: 1px;
                 background-color: #d3c0a3;
@@ -178,15 +190,15 @@
 
                 .popup {
                     position: absolute;
-                    left: 0;
-                    bottom: -25px;
+                    left: -30px;
+                    top: -25px;
                     color: #ffffff;
                     font-size: 10px;
                     padding: 2px 20px;
                     background-color: #08121b;
                     border: 2px solid #b38a4d;
                     white-space: nowrap;
-                    z-index: 20;
+                    z-index: 1000;
                     opacity: 0;
                     visibility: hidden;
                     transition: 200ms;
@@ -202,7 +214,7 @@
             gap: 10px;
             padding: 0 60px 0 20px;
             margin: 0 0 0 20px;
-            background-color: #0a1622;
+            background-color: #050a10b9;
 
             .avatar {
                 position: relative;
@@ -278,10 +290,12 @@
         position: fixed;
         right: 0;
         top: 110px;
-        background-color: #0a1622;
+        background-color: #050a10b9;
+        backdrop-filter: blur(20px);
         min-width: 240px;
         height: calc(100% - 110px);
-        overflow: auto;
+        opacity: 0;
+        animation: fade 200ms 400ms forwards;
 
         .requests {
             @include flex(space-between, center, row);
@@ -310,6 +324,150 @@
 
         }
 
+        .friends {
+
+            .friend {
+                @include flex(flex-start, center, row);
+                padding: 10px 20px;
+                gap: 10px;
+                cursor: pointer;
+                transition: 200ms;
+                position: relative;
+
+                &:hover {
+                    background-color: #e7c4901a;
+
+                    .icon {
+    
+                        img {
+                            border: 3px solid #a37228;
+                        }
+    
+                    }
+
+                    .info {
+                        color: #c8b08b;
+                    }
+
+                    .popup {
+                        opacity: 1;
+                        visibility: visible;
+                        bottom: -130px
+                    }
+                }
+
+                .icon {
+                    @include flex(center, center, row);
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 2px;
+                        height: 3px;
+                        border-radius: 50%;
+                        background-color: #08121b;
+                        border: 3px solid #ffffff99;
+                        bottom: 0;
+                        right: 0;
+                    }
+
+                    img {
+                        width: 35px;
+                        border-radius: 50%;
+                        border: 3px solid #a3722899;
+                    }
+
+                }
+
+                .info {
+                    color: #c8b08b99;
+                    font-size: 12px;
+
+                    span {
+                        font-size: 9px;
+                    }
+
+
+                }
+
+                .popup {
+                    position: absolute;
+                    left: -360px;
+                    bottom: -140px;
+                    border: 3px solid #a37228;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .4s;
+                    background-color: #0a1622;
+                    
+                    width: 350px;
+
+                    .banner {
+
+                        img {
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100px;
+
+                        }
+
+                    }
+
+                    .user {
+                        @include flex(flex-start, flex-end, row);
+                        gap: 35px;
+                        padding: 0 35px;
+                        transform: translateY(-30px);
+                        margin: 0 0 30px 0;
+
+                        .image-user {
+                            position: relative;
+
+                            .border {
+                                width: 125px;
+                                position: absolute;
+                                top: -20px;
+                                left: -20px;
+                                z-index: 100;
+                            }
+                            
+                            .icon {
+                                width: 80px;
+                                border-radius: 50%;
+                            }
+
+                        }
+
+                        .name {
+                            @include flex(center, flex-start, column);
+
+                            p {
+                                color: #b38a4d;
+                                font-size: 14px;
+                                margin: 0;
+                            }
+    
+                            span {
+                                color: #c8b08b99;
+                                font-size: 10px;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+            
+        }
+
+    }
+
+    .content {
+        width: 100%;
+        height: 100%;
     }
 
 }

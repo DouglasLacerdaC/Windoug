@@ -1,0 +1,48 @@
+@import '../../../../../assets/scss/flex.scss';
+
+main {
+    background-image: url('../../../../../assets/img/leagueOfLegends/client/bg.png');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+    h2, button {
+        
+        font-family: 'FrizQuadrata';
+    
+    }
+
+    .content {
+        @include flex(center, flex-start, column);
+        padding: 110px 40px 0 40px;
+        height: 100%;
+        width: calc(100% - 240px);
+        color: #cdcdcd;
+
+        h2 {
+            text-transform: uppercase;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: double #902d9d80;
+            background-color: #050a10db;
+            border-radius: 5px;
+            margin: 10px 0 0;
+            opacity: 0.8;
+            transition: 200ms;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            a {
+                color: #cdcdcd;
+            }
+
+        }
+
+    }
+
+}
