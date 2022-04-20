@@ -9,6 +9,7 @@ import { EpicComponent } from './views/windows/epic/epic.component';
 import { LoginComponent } from './views/windows/leagueOfLegends/login/login.component';
 import { ClientComponent } from './views/windows/leagueOfLegends/client/client.component';
 import { HomeComponent } from './views/windows/leagueOfLegends/home/home.component';
+import { PvpComponent } from './views/windows/leagueOfLegends/pvp/pvp.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeComponent } from './views/windows/leagueOfLegends/home/home.compone
     EpicComponent,
     LoginComponent,
     ClientComponent,
-    HomeComponent
+    HomeComponent,
+    PvpComponent
   ],
   imports: [
     BrowserModule,

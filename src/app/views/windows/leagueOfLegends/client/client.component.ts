@@ -16,9 +16,9 @@ export class ClientComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  navigate() {
+  navigate(router: string) {
 
-    this.router.navigate(['system/LeagueOfLegends/home'])
+    this.router.navigate([router])
 
   }
 
