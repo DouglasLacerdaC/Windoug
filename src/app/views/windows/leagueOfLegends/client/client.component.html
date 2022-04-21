@@ -21,18 +21,24 @@
 
             <ul class="list-game">
 
-                <li class="active">Início</li>
-                <li>TFT</li>
-                <li>Clash</li>
+                <a [routerLink]="['home']">
+                    <li routerLinkActive="active">Início</li>
+                </a>
+                <li class="invalid">TFT</li>
+                <li class="invalid">Clash</li>
     
             </ul>
     
             <ul class="navigation">
     
-                <li><img src="../../../../../assets/img/leagueOfLegends/client/user-profile.png" alt=""></li>
-                <li><img src="../../../../../assets/img/leagueOfLegends/client/collection.png" alt=""></li>
-                <li><img src="../../../../../assets/img/leagueOfLegends/client/espolio.png" alt=""></li>
-                <li><img src="../../../../../assets/img/leagueOfLegends/client/store.png" alt=""></li>
+                <a [routerLink]="['profile']">
+                    <li routerLinkActive="active">
+                        <img src="../../../../../assets/img/leagueOfLegends/client/user-profile.png" alt="">
+                    </li>
+                </a>
+                <li class="invalid"><img src="../../../../../assets/img/leagueOfLegends/client/collection.png" alt=""></li>
+                <li class="invalid"><img src="../../../../../assets/img/leagueOfLegends/client/espolio.png" alt=""></li>
+                <li class="invalid"><img src="../../../../../assets/img/leagueOfLegends/client/store.png" alt=""></li>
                 
             </ul>
 

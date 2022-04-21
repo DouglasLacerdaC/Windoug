@@ -1,0 +1,181 @@
+@import '../../../../../assets/scss/flex.scss';
+
+@keyframes going {
+
+    100% {
+
+        transform: translateY(-90px);
+        opacity: 1;
+
+    }
+
+}
+
+main {
+    background-image: url('../../../../../assets/img/leagueOfLegends/client/pykeProfile.png');
+    background-color: #000000;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+    p, h5, h3, span {
+        
+        font-family: 'FrizQuadrata';
+    
+    }
+
+    .content {
+        @include flex(flex-start, flex-start, row);
+        gap: 20px;
+        padding: 72px 40px 0 40px;
+        height: 100%;
+        width: calc(100% - 240px);
+        color: #cdcdcd;
+
+        .banner {
+            transform: translateY(-200px);
+            opacity: 0;
+            animation: going .5s 200ms forwards;
+            position: relative;
+
+            img:nth-child(1) {
+                height: 500px;
+                z-index: 1;
+            }
+
+            .rank {
+                height: max-content;
+                position: absolute;
+                top: 35%;
+                left: 10px;
+                text-align: center;
+
+                img {
+                    height: max-content;
+                    width: 125px;
+                }
+
+                p {
+                    max-width: 100px;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    margin: 0 auto;
+                }
+
+            }
+            
+        }
+
+        .flex {
+            @include flex(center, flex-end, row);
+            height: 100%;
+            flex-grow: 1;
+
+            .goals {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+                .goal {
+                    @include flex(space-between, center, column);
+                    padding: 15px 25px;
+                    text-align: center;
+
+                    &:hover {
+                        background: linear-gradient(181.07deg, rgba(196, 196, 196, 0) 9.43%, rgba(201, 171, 126, 0.149) 138.45%);
+                    
+                        .champion-score {
+                            top: 80px;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+
+                    }
+
+                    .description {
+                        margin: 0 0 20px 0;
+                        text-transform: uppercase;
+
+                        h5 {
+                            font-size: 11px;
+                            color: #c8b08b;
+                        }
+
+                        span {
+                            font-size: 10px;
+                            color: #ece2d3;
+                        }
+
+                    }
+
+                    img {
+                        width: 85px;
+                    }
+
+                    .champion-score {
+                        background-color: #050a10df;
+                        padding: 20px 20px 10px 20px;
+                        border-radius: 5px;
+                        border: 2px solid #a372282b;
+                        position: absolute;
+                        text-transform: uppercase;
+                        top: 50px;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: 400ms;
+                        color: #c8b08b;
+
+                        h3 {
+                            font-size: 14px;
+                        }
+
+                        .champions {
+                            @include flex(center, flex-start, row);
+                            gap: 40px;
+
+                            .champion {
+                                @include flex(center, space-between, column);
+
+                                img {
+                                    transform: translateY(5px);
+                                    width: 80px;
+                                }
+                                
+                                .score {
+                                    
+                                    h3 {
+                                        padding: 0 0 5px 0;
+                                        border-bottom: 1px solid #c8b08b;
+                                        display: inline-block;
+                                        margin: 0 0 5px 0;
+                                        font-size: 12px;
+                                    }
+    
+                                    p {
+                                        font-size: 10px;
+                                        color: #c8b08b99;
+                                    }
+    
+                                    span {
+                                        font-size: 9px;
+                                        color: #c8b08b90;
+                                        text-transform: capitalize;
+                                    }
+    
+                                }
+    
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

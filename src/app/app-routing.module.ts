@@ -5,6 +5,7 @@ import { EpicComponent } from './views/windows/epic/epic.component';
 import { ClientComponent } from './views/windows/leagueOfLegends/client/client.component';
 import { HomeComponent } from './views/windows/leagueOfLegends/home/home.component';
 import { LoginComponent } from './views/windows/leagueOfLegends/login/login.component';
+import { ProfileComponent } from './views/windows/leagueOfLegends/profile/profile.component';
 import { PvpComponent } from './views/windows/leagueOfLegends/pvp/pvp.component';
 
 const routes: Routes = [
@@ -33,6 +34,10 @@ const routes: Routes = [
           {
             path: 'pvp',
             component: PvpComponent
+          },
+          {
+            path: 'profile',
+            component: ProfileComponent
           },
         ]
       }

@@ -10,6 +10,7 @@ import { LoginComponent } from './views/windows/leagueOfLegends/login/login.comp
 import { ClientComponent } from './views/windows/leagueOfLegends/client/client.component';
 import { HomeComponent } from './views/windows/leagueOfLegends/home/home.component';
 import { PvpComponent } from './views/windows/leagueOfLegends/pvp/pvp.component';
+import { ProfileComponent } from './views/windows/leagueOfLegends/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PvpComponent } from './views/windows/leagueOfLegends/pvp/pvp.component'
     LoginComponent,
     ClientComponent,
     HomeComponent,
-    PvpComponent
+    PvpComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
