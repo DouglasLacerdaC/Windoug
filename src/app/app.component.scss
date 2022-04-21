@@ -1,0 +1,46 @@
+.responsive {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-image: url('../assets/img/system/background.png');
+    background-color: #00041c;
+
+    div {
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(20px);
+        display: flex;   
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #ffffff;
+        padding: 20px;
+
+        img {
+            width: 200px;
+            margin: 0 0 20px 0;
+        }
+
+        p {
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+
+    }
+
+
+}
+
+@media (max-width: 1250px) {
+
+    .responsive {
+        display: block;
+    }
+
+    div:nth-child(2) {
+        display: none;
+    }
+
+}
