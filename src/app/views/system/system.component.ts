@@ -12,7 +12,7 @@ export class SystemComponent implements OnInit {
   @ViewChild('window') window: any
 
   launchers: any = Launchers
-  windowClass: string = 'opened'
+  windowClass: string = ''
 
   pressed: boolean = false
   windowPositionY: any

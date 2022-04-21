@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import '../../../../../assets/scss/flex.scss';
+
+@keyframes loadingFort {
+
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes notificationOpened {
+
+    100% {
+        top: 30%;
+        opacity: 1;
+    }
+
+}
+
+.window-content {
+    position: relative;
+    height: calc(100% - 35px);
+    background-color: #121212;
+    background-image: url('../../../../../assets/img/fortnite/banner.jpg');
+    background-size: cover;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 0 0 5px 5px;
+
+    p, h4 {
+        font-family: 'Bangers', cursive;
+        font-size: 40px;
+    }
+    
+    .loading {
+        position: absolute;
+        top: 20px;
+        right: 50px;
+        animation: loadingFort 2s infinite;
+        
+    }
+
+    .notification {
+        @include flex(center, center, row);
+        background-color: #121212d0;
+        border-radius: 10px;
+        position: absolute;
+        top: 25%;
+        left: calc(50% - 300px);
+        width: 600px;
+        backdrop-filter: blur(20px);
+        padding: 20px;
+        opacity: 0;
+        animation: notificationOpened .5s 3s forwards;
+
+        img {
+            width: 150px;
+        }
+
+        .description {
+            color: #ffffff;
+            letter-spacing: 1px;
+
+            h4 {
+                font-size: 34px;
+                margin: 0 0 20px 0;
+            }
+
+            p {
+                font-size: 14px;
+                color: #ffffff99;
+                line-height: 20px;
+            }
+
+        }
+
+    }
+
+
+}

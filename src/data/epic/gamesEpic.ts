@@ -5,6 +5,6 @@ export const GamesEpic: any = [
         icon: '../../../assets/img/system/icons/fortnite.jpg',
         percentageDownload: 0,
         classVisible: '',
-        router: ''
+        router: '/system/fortnite'
     }
 ]

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SystemComponent } from './views/system/system.component';
 import { EpicComponent } from './views/windows/epic/epic.component';
+import { LoadingComponent } from './views/windows/fortnite/loading/loading.component';
 import { ClientComponent } from './views/windows/leagueOfLegends/client/client.component';
 import { HomeComponent } from './views/windows/leagueOfLegends/home/home.component';
 import { LoginComponent } from './views/windows/leagueOfLegends/login/login.component';
@@ -19,6 +20,10 @@ const routes: Routes = [
       {
         path: 'epic',
         component: EpicComponent
+      },
+      {
+        path: 'fortnite',
+        component: LoadingComponent
       },
       {
         path: 'LeagueOfLegends/login',
