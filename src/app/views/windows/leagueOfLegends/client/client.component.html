@@ -2,6 +2,15 @@
 
 <div class="window-content">
 
+    <div class="notification" [ngClass]="notification">
+
+        <img src="../../../../../assets/img/leagueOfLegends/client/rammus.png" alt="">
+        <p>Projeto desenvolvido com afinidade de testar meus conhecimento com o framework angular. Espero que goste
+            e também contribua para o projeto crescer :)
+        </p>
+
+    </div>
+
     <header>
 
         <div class="play-game">
@@ -69,7 +78,7 @@
             </div>
 
             <div class="info-user">
-                <p>douglc</p>
+                <p>{{ user }}</p>
                 <span>
                     <div class="ball"></div>
                     Online

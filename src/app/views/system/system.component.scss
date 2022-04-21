@@ -1,6 +1,20 @@
 @import '../../../assets/scss/window.scss';
 @import '../../../assets/scss/flex.scss';
 
+@keyframes windowOpened {
+
+    100% {
+
+        opacity: 1;
+        transform: scale(1);
+        visibility: visible;
+        filter: blur(0);
+        z-index: 9;
+
+    }
+
+}
+
 .workspace {
     padding: 20px;
     width: 100%;
@@ -108,17 +122,12 @@
     visibility: hidden;
     opacity: 0;
     transform: scale(50);
-    transition: 500ms;
     z-index: 11;
+    transition: 0s;
 
     &.opened {
         
-        opacity: 1;
-        transform: scale(1);
-        visibility: visible;
-        filter: blur(0);
-        transition: 1s;
-        z-index: 9;
+        animation: windowOpened 500ms forwards;
 
     }
 

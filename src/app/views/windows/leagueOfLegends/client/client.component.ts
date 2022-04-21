@@ -10,10 +10,29 @@ import { Friends } from 'src/data/leagueOfLegends/friends';
 export class ClientComponent implements OnInit {
 
   friends: any = Friends
+  
+  user: any = 'desconhecido?'
+
+  notification: string = ''
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+  
+    this.user = localStorage.getItem('user')
+
+    setTimeout(() => {
+
+      this.notification = 'opening-notification'
+
+      setTimeout(() => {
+        
+        this.notification = ''
+        
+      }, 6000)
+
+    }, 2000)
+
   }
 
   navigate(router: string) {

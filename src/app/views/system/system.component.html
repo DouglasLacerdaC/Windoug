@@ -26,9 +26,9 @@
     </ul>
 </div>
 
-<div class="window" [ngClass]="windowClass">
+<div class="window" [ngClass]="windowClass" #window>
     
-    <header>
+    <header (mousedown)="headerPressed($event)" (mousemove)="headerMove($event)" (mouseup)="headerUp()">
         <button (click)="windowClosed()">
             <div></div>
         </button>

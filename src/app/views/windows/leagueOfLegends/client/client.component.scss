@@ -1,5 +1,21 @@
 @import '../../../../../assets/scss/flex.scss';
 
+@keyframes imagepopup {
+
+    0% {
+        transform: rotate(30deg) scale(1);
+    }
+    
+    50% {
+        transform: rotate(-15deg) scale(1.1);
+    }
+    
+    100% {
+        transform: rotate(30deg) scale(1);
+    }
+
+}
+
 .window-content {
     position: relative;
     height: calc(100% - 35px);
@@ -14,6 +30,40 @@
         
         font-family: 'FrizQuadrata';
     
+    }
+
+    .notification {
+        @include flex(center, center, row);
+        gap: 20px;
+        position: absolute;
+        top: 40px;
+        left: 17%;
+        background-color: #ff980029;
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+        padding: 20px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 400ms;
+        color: #cdcdcd;
+
+        &.opening-notification {
+            top: 85px;
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+        img {
+            width: 100px;
+            animation: imagepopup 5s infinite;
+        }
+
+        p {
+            max-width: 450px;
+            font-size: 12px;
+        }
+
     }
 
     header {

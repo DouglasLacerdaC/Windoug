@@ -45,7 +45,7 @@
                 label {
                     position: absolute;
                     left: 10px;
-                    top: 14px;
+                    top: 16px;
                     font-size: 10px;
                     font-weight: bolder;
                     letter-spacing: 1px;
@@ -67,10 +67,10 @@
                         border: 3px solid #000000;
                     }
 
-                    &:focus + label, &:valid + label {
-                        top: 3px;
-                        left: 5px;
-                        font-size: 9px;
+                    &:focus + label, &.input-checked + label {
+                        top: 3px !important;
+                        left: 5px !important;
+                        font-size: 9px !important;
                     }
 
                 }
@@ -78,7 +78,9 @@
             }
 
             button {
-                @include flex(center, center, row);
+                display: none;
+                justify-content: center;
+                align-items: center;
                 width: max-content;
                 padding: 15px;
                 border-radius: 15px;

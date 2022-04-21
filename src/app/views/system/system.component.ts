@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Launchers } from 'src/data/system/launchers';
 
@@ -9,8 +9,14 @@ import { Launchers } from 'src/data/system/launchers';
 })
 export class SystemComponent implements OnInit {
 
+  @ViewChild('window') window: any
+
   launchers: any = Launchers
   windowClass: string = 'opened'
+
+  pressed: boolean = false
+  windowPositionY: any
+  windowPositionX: any
 
   constructor(private router: Router) { }
 
@@ -40,5 +46,35 @@ export class SystemComponent implements OnInit {
     }, 700)
 
   }
+
+  headerPressed(event: MouseEvent) {
+    
+    this.pressed = true
+    
+    this.windowPositionY = event.offsetY
+    this.windowPositionX = event.offsetX
+    
+  }
+
+  headerMove(event: MouseEvent) {
+    
+    if(!this.pressed) {
+
+      return event.preventDefault()
+      
+    }
+    
+    this.window.nativeElement.style.top = `${event.clientY - this.windowPositionY}px`
+    this.window.nativeElement.style.left = `${event.clientX - this.windowPositionX}px`
+
+  }
+
+  headerUp() {
+
+    this.pressed = false
+
+  }
+
+  
 
 }

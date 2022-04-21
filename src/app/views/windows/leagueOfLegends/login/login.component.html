@@ -11,11 +11,11 @@
             <legend>Fazer login</legend>
 
             <div class="input">
-                <input formControlName="user" type="text">
+                <input formControlName="user" (keyup)="controlInput()" type="text" #user>
                 <label>Nome de usuário</label>
             </div>
 
-            <button> <img src="../../../../../assets/img/leagueOfLegends/login/arrow.png" alt=""> </button>
+            <button #buttonLogin> <img src="../../../../../assets/img/leagueOfLegends/login/arrow.png" alt=""> </button>
 
         </form>
 

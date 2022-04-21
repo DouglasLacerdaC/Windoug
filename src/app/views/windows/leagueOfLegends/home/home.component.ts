@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  user: any = 'desconhecido?'
+  notification: string = ''
+
   constructor() { }
 
   ngOnInit(): void {
+
+    this.user = localStorage.getItem('user')
+
   }
 
 }
