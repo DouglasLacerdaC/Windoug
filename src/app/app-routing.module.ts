@@ -7,6 +7,7 @@ import { HomeComponent } from './views/windows/leagueOfLegends/home/home.compone
 import { LoginComponent } from './views/windows/leagueOfLegends/login/login.component';
 import { ProfileComponent } from './views/windows/leagueOfLegends/profile/profile.component';
 import { PvpComponent } from './views/windows/leagueOfLegends/pvp/pvp.component';
+import { SummonersComponent } from './views/windows/leagueOfLegends/summoners/summoners.component';
 
 const routes: Routes = [
   
@@ -38,6 +39,10 @@ const routes: Routes = [
           {
             path: 'profile',
             component: ProfileComponent
+          },
+          {
+            path: 'summoners',
+            component: SummonersComponent
           },
         ]
       }

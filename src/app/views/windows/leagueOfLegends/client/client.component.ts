@@ -27,17 +27,23 @@ export class ClientComponent implements OnInit {
 
       setTimeout(() => {
         
-        this.notification = ''
+        this.removeNotification()
         
       }, 6000)
 
-    }, 2000)
+    }, 2500)
 
   }
 
   navigate(router: string) {
 
     this.router.navigate([router])
+
+  }
+
+  removeNotification() {
+
+    this.notification = ''
 
   }
 

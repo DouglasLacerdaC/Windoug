@@ -13,7 +13,7 @@ export const Friends: any = [
     },
     {
         icon: '../../../assets/img/leagueOfLegends/client/icons/pyke.png',
-        name: 'Jubsbsbs',
+        name: 'gustavo',
         banner: '../../../assets/img/leagueOfLegends/client/banners/sett.jpg',
         level: '125'
     },

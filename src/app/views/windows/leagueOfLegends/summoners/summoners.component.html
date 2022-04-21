@@ -1,0 +1,92 @@
+<main>
+
+    <div class="content">
+
+        <div class="players">
+
+            <div class="new-player">
+
+                <button>
+                    +
+                </button>
+
+            </div>
+            
+            <div class="new-player">
+
+                <button>
+                    +
+                </button>
+
+            </div>
+
+            <div class="player">
+
+                <div class="banner">
+                    <img src="../../../../../assets/img/leagueOfLegends/client/bannerLobby.png" alt="">
+                    <div class="rank">
+                        <img src="../../../../../assets/img/leagueOfLegends/client/platinum.png" alt="">
+                        <p>douglc</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="new-player">
+
+                <button>
+                    +
+                </button>
+
+            </div>
+
+            <div class="new-player">
+
+                <button>
+                    +
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="options">
+
+            <div class="return" (click)="navigate('system/LeagueOfLegends/home')">
+                X
+            </div>
+
+            <div class="search-match">
+                Encontrar partida
+            </div>
+
+            <div class="route">
+
+                <div class="choose" (click)="openedList()">
+                    <img src="{{ srcRoute }}" alt="">
+                </div>
+
+                <ul [ngClass]="listVisible">
+                    <li (click)="alterRouter('../../../../../assets/img/leagueOfLegends/client/top.png')">
+                        <img src="../../../../../assets/img/leagueOfLegends/client/top.png" alt="">
+                    </li>
+                    <li (click)="alterRouter('../../../../../assets/img/leagueOfLegends/client/jg.png')">
+                        <img src="../../../../../assets/img/leagueOfLegends/client/jg.png" alt="">
+                    </li>
+                    <li (click)="alterRouter('../../../../../assets/img/leagueOfLegends/client/mid.png')">
+                        <img src="../../../../../assets/img/leagueOfLegends/client/mid.png" alt="">
+                    </li>
+                    <li (click)="alterRouter('../../../../../assets/img/leagueOfLegends/client/adc.png')">
+                        <img src="../../../../../assets/img/leagueOfLegends/client/adc.png" alt="">
+                    </li>
+                    <li (click)="alterRouter('../../../../../assets/img/leagueOfLegends/client/sup.png')">
+                        <img src="../../../../../assets/img/leagueOfLegends/client/sup.png" alt="">
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>

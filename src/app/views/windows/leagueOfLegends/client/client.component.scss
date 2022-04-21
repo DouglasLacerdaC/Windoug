@@ -44,8 +44,9 @@
         padding: 20px;
         visibility: hidden;
         opacity: 0;
-        transition: 400ms;
+        transition: .5s;
         color: #cdcdcd;
+        z-index: 4000;
 
         &.opening-notification {
             top: 85px;
@@ -433,6 +434,7 @@
                     visibility: hidden;
                     transition: .4s;
                     background-color: #0a1622;
+                    z-index: 4000;
                     
                     width: 350px;
 

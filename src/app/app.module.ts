@@ -11,6 +11,7 @@ import { ClientComponent } from './views/windows/leagueOfLegends/client/client.c
 import { HomeComponent } from './views/windows/leagueOfLegends/home/home.component';
 import { PvpComponent } from './views/windows/leagueOfLegends/pvp/pvp.component';
 import { ProfileComponent } from './views/windows/leagueOfLegends/profile/profile.component';
+import { SummonersComponent } from './views/windows/leagueOfLegends/summoners/summoners.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProfileComponent } from './views/windows/leagueOfLegends/profile/profil
     ClientComponent,
     HomeComponent,
     PvpComponent,
-    ProfileComponent
+    ProfileComponent,
+    SummonersComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,173 @@
+@import '../../../../../assets/scss/flex.scss';
+
+main {
+    background-image: url('../../../../../assets/img/leagueOfLegends/client/lobby.jpg');
+    transition: 200ms opacity;
+    background-color: #00185a4f;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+    p, div {
+        
+        font-family: 'FrizQuadrata';
+    
+    }
+
+    .content {
+        padding: 72px 40px 0 40px;
+        height: 100%;
+        width: calc(100% - 240px);
+        color: #cdcdcd;
+        overflow-y: hidden;
+
+        .players {
+            @include flex(center, center, row);
+            gap: 40px;
+            height: calc(100% - 72px);
+
+            .player {
+                transform: translateY(-60px);
+                
+                .banner {
+                    position: relative;
+        
+                    img:nth-child(1) {
+                        height: 500px;
+                        z-index: 1;
+                    }
+        
+                    .rank {
+                        height: max-content;
+                        position: absolute;
+                        top: 35%;
+                        left: 10px;
+                        text-align: center;
+        
+                        img {
+                            height: max-content;
+                            width: 125px;
+                        }
+        
+                        p {
+                            max-width: 100px;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            margin: 0 auto;
+                        }
+        
+                    }
+                    
+                }
+
+            }
+
+            .new-player {
+                @include flex(center, center, row);
+
+                button {
+                    width: 75px;
+                    height: 75px;
+                    border-radius: 50%;
+                    border: 1px solid #a37228;
+                    background-color: #1d273790;
+                    font-size: 25px;
+                    color: #a37228;
+
+                }
+
+            }
+
+        }
+
+        .options {
+            @include flex(center, center, row);
+            gap: 10px;
+
+            .return {
+                @include flex(center, center, row);
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background-color: #1d2737;
+                border: 3px solid #a37228;
+                color: #a37228;
+                opacity: 0.7;
+                transform: 200ms;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+            }
+
+            .search-match {
+                padding: 7px 15px;
+                border-bottom: 4px solid #cdcdcd90;
+                border-left: 4px solid #cdcdcd90;
+                border-right: 4px solid #cdcdcd90;
+                color: #cdcdcd90;
+                border-radius: 20px 20px 5px 5px;
+                background: linear-gradient(0.56deg, #23303ba8 0.67%, rgba(196, 196, 196, 0) 208.77%);
+
+            }
+
+            .route {
+
+                .choose {
+                    @include flex(center, center, row);
+                    border-radius: 50%;
+                    border: 2px solid #a37228;
+                    background-color: #1d2737;
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
+
+                    img {
+                        width: 25px
+                    }
+
+                }
+
+                ul {
+                    @include flex(center, center, row);
+                    gap: 10px;
+                    position: absolute;
+                    bottom: 60px;
+                    z-index: 1;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 200ms;
+                    border-bottom: 1px solid #a37228;
+
+                    &.list-visible {
+                        opacity: 1;
+                        visibility: visible;
+                        bottom: 90px;
+                    }
+
+                    li {
+                        opacity: 0.6;
+                        transition: 200ms;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+
+                        img {
+                            width: 30px;
+                            filter: drop-shadow(2px 20px 20px #000000);
+                        }
+
+                    }
+
+                }
+
+            }
+            
+        }
+
+    }
+
+}
