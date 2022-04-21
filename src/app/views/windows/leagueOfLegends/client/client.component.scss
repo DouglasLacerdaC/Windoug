@@ -1,13 +1,5 @@
 @import '../../../../../assets/scss/flex.scss';
 
-@keyframes fade {
-
-    100% {
-        opacity: 1;
-    }
-
-}
-
 .window-content {
     position: relative;
     height: calc(100% - 35px);
@@ -28,8 +20,6 @@
         border-bottom: 1px solid #ebcfa426;
         position: fixed;
         width: 100%;
-        opacity: 0;
-        animation: fade 200ms 400ms forwards;
         background-color: #0a162280;
         backdrop-filter: blur(20px);
 
@@ -294,8 +284,6 @@
         backdrop-filter: blur(20px);
         min-width: 240px;
         height: calc(100% - 110px);
-        opacity: 0;
-        animation: fade 200ms 400ms forwards;
 
         .requests {
             @include flex(space-between, center, row);

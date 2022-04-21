@@ -1,0 +1,20 @@
+@keyframes loading {
+
+    100% {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+@keyframes finishLoading {
+
+    100% {
+
+        visibility: hidden;
+        opacity: 0;
+
+    }
+
+}

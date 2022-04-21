@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pvp',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PvpComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  navigate(router: string) {
+
+    this.router.navigate([router])
+
   }
 
 }
