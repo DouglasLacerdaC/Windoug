@@ -15,6 +15,54 @@
 
 }
 
+@keyframes loadingSpinnerSystem {
+    
+    0% {
+        transform: rotate(-200deg)
+    }
+    
+    50% {
+        transform: rotate(-150deg)
+    }
+    
+    100% {
+        transform: rotate(-200deg)
+    }
+
+}
+
+@keyframes loadingSpinnerFinish {
+
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+}
+
+.loading-system {
+    @include flex(center, center, row);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+    background-image: url('../../../assets/img/system/background.png');
+    background-color: #00041c;
+    z-index: 1000;
+    animation: loadingSpinnerFinish .4s 3s forwards;
+
+    .spinner {
+        width: 100px;
+        height: 100px;
+        border-top: 5px solid #170038;
+        border-left: 5px solid #170038;
+        border-right: 5px solid #170038;
+        animation: loadingSpinnerSystem 3s infinite;
+    }
+
+
+}
+
 .workspace {
     padding: 20px;
     width: 100%;
