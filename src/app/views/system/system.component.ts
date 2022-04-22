@@ -53,11 +53,11 @@ export class SystemComponent implements OnInit {
   }
 
   windowClosed() {
-    this.windowClass = ''
-    this.pressed = false
     setTimeout(() => {
+      this.windowClass = ''
+      this.pressed = false
       this.router.navigate([''])
-    }, 700)
+    }, 500)
   }
 
   headerPressed(event: MouseEvent) {
