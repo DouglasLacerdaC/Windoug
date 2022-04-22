@@ -13,6 +13,7 @@ import { PvpComponent } from './views/windows/leagueOfLegends/pvp/pvp.component'
 import { ProfileComponent } from './views/windows/leagueOfLegends/profile/profile.component';
 import { SummonersComponent } from './views/windows/leagueOfLegends/summoners/summoners.component';
 import { LoadingComponent } from './views/windows/fortnite/loading/loading.component';
+import { NotFoundComponent } from './views/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LoadingComponent } from './views/windows/fortnite/loading/loading.compo
     PvpComponent,
     ProfileComponent,
     SummonersComponent,
-    LoadingComponent
+    LoadingComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

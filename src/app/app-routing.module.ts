@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from './views/not-found/not-found.component';
 import { SystemComponent } from './views/system/system.component';
 import { EpicComponent } from './views/windows/epic/epic.component';
 import { LoadingComponent } from './views/windows/fortnite/loading/loading.component';
@@ -52,7 +53,8 @@ const routes: Routes = [
         ]
       }
     ]  
-  }
+  },
+  { path: '**', component: NotFoundComponent },
 
 ];
 
