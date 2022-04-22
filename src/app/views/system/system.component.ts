@@ -61,6 +61,7 @@ export class SystemComponent implements OnInit {
   }
 
   headerPressed(event: MouseEvent) {
+    if(event.target !== event.currentTarget) return;
     this.pressed = true
     this.windowPositionY = event.offsetY
     this.windowPositionX = event.offsetX
