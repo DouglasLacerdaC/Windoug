@@ -61,6 +61,9 @@ export class SystemComponent implements OnInit {
       this.windowClass = ''
       this.router.navigate([''])
 
+      this.window.nativeElement.style.top = `5vh`
+      this.window.nativeElement.style.left = `calc(50% - 600px)`
+
     }, 500)
 
   }
