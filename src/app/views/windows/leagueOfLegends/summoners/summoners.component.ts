@@ -11,9 +11,14 @@ export class SummonersComponent implements OnInit {
   srcRoute: string = '../../../../../assets/img/leagueOfLegends/client/choose.png'
   listVisible: string = ''
 
+  user: any = 'desconhecido?'
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    
+    this.user = localStorage.getItem('user')
+
   }
 
   navigate(router: string) {
