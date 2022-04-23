@@ -23,7 +23,7 @@
 
 <div class="window" [ngClass]="windowClass" #window>
     
-    <header (mousedown)="headerPressed($event)" (mousemove)="headerMove($event)" (mouseup)="headerUp()">
+    <header (mousedown)="headerPressed($event)">
         <button (click)="windowClosed()">
             <div></div>
         </button>

@@ -21,6 +21,24 @@ export class SystemComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+
+    document.addEventListener('mousemove', (event: MouseEvent) => {
+      
+      if(this.pressed) {
+      
+        this.window.nativeElement.style.top = `${event.clientY - this.windowPositionY}px`
+        this.window.nativeElement.style.left = `${event.clientX - this.windowPositionX}px`
+      
+      }
+
+    })
+
+    document.addEventListener('mouseup', () => {
+
+      this.pressed = false
+
+    })
+
   }
 
   windowOpened(router: string) {
@@ -37,13 +55,13 @@ export class SystemComponent implements OnInit {
 
   windowClosed() {
     
-    this.windowClass = ''
-  
+    
     setTimeout(() => {
-
+      
+      this.windowClass = ''
       this.router.navigate([''])
 
-    }, 700)
+    }, 500)
 
   }
 
@@ -55,26 +73,5 @@ export class SystemComponent implements OnInit {
     this.windowPositionX = event.offsetX
     
   }
-
-  headerMove(event: MouseEvent) {
-    
-    if(!this.pressed) {
-
-      return event.preventDefault()
-      
-    }
-    
-    this.window.nativeElement.style.top = `${event.clientY - this.windowPositionY}px`
-    this.window.nativeElement.style.left = `${event.clientX - this.windowPositionX}px`
-
-  }
-
-  headerUp() {
-
-    this.pressed = false
-
-  }
-
-  
 
 }
