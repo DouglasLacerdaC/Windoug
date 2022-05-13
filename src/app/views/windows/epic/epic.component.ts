@@ -19,14 +19,15 @@ export class EpicComponent implements OnInit {
 
   downloadGame(game: any) {
 
-    if (game.classVisible != 'installed') {
+    if (game.pressed == false) {
+
+      game.pressed = true
 
       const timeDownload = setInterval(() => {
 
         this.value += 1
 
         game.percentageDownload = `${this.value}%`
-
         game.classVisible = 'downloading'
 
         if (this.value == 100) {
@@ -34,7 +35,6 @@ export class EpicComponent implements OnInit {
           clearInterval(timeDownload)
 
           game.percentageDownload = 'Instalado'
-
           game.classVisible = 'installed'
 
           this.value = 0
